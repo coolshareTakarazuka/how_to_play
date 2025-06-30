@@ -234,10 +234,124 @@
     </style>
 
 <body>
+  
+
+  <div class="tabs">
+
+    <input
+        id="movie1"
+        class="movie1"
+        type="radio"
+        name="tab_item"
+        aria-label="動画1"
+        checked
+      />
+      <label class="tab_item blinking-link" for="movie1">動画①<br>STEP１〜３</label>
+    
+      <input
+        id="movie2"
+        class="movie2"
+        type="radio"
+        name="tab_item"
+        aria-label="動画2"
+      />
+      <label class="tab_item blinking-link" for="movie2">動画②<br>STEP４〜９</label>
+
+      <input
+        id="movie3"
+        class="movie3"
+        type="radio"
+        name="tab_item"
+        aria-label="動画3"
+      />
+      <label class="tab_item blinking-link" for="movie3">動画③<br>STEP10〜13</label>
+
+      
+
+      <div class="tab_content" id="movie1_content">
+        <div class="動画①">
+          <p class="c-txtsp">
+
     <div class="youtube_short"><iframe width="315" height="560" src="https://www.youtube.com/embed/jcCQ_Vd8lDk" title="クールシェアたからづか遊び方①" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-    <p><i class="fa-solid fa-volume-high"></i> 動画再生時に音が出ますのでご注意ください<br>
-    「QRコード」株式会社デンソーウェーブの登録商標です。</p>
-        <style>
+    
+      </p>
+      </div>
+      </div>
+
+      <div class="tab_content" id="movie2_content">
+        <div class="動画②">
+          <p class="c-txtsp">
+            Coming soon...
+          </p>
+        </div>
+        </div>
+
+        <div class="tab_content" id="movie3_content">
+          <div class="動画③">
+            <p class="c-txtsp">
+              Coming soon...
+            </p>
+          </div>
+          </div>
+          
+        </div>
+  
+          <style>
+           
+            .tabs {
+              margin-top: 5px;
+              padding-bottom: 5px;
+              background-color: #fff;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+              width: 100%;
+              margin: 0 auto;
+            }
+          
+            .tab_item {
+              width: calc(100% / 3);
+              height: 100px;
+              border-bottom: 3px solid #66b2ff;
+              background-color: #d9d9d9;
+              line-height: 50px;
+              font-size: 16px;
+              text-align: center;
+              color: #565656;
+              display: block;
+              float: left;
+              text-align: center;
+              font-weight: bold;
+              font-size: 80%;
+              transition: all 0.2s ease;
+            }
+            .tab_item:hover {
+              opacity: 0.75;
+            }
+          
+            /*ラジオボタンを全て消す*/
+            input[name="tab_item"] {
+              display: none;
+            }
+          
+            /*タブ切り替えの中身のスタイル*/
+            .tab_content {
+              display: none;
+              padding: 5px 20px 0;
+              clear: both;
+              overflow: hidden;
+            }
+          
+            /*選択されているタブのコンテンツのみを表示*/
+            #movie1:checked ~ #movie1_content,
+            #movie2:checked ~ #movie2_content,
+            #movie3:checked ~ #movie3_content {
+              display: block;
+            }
+          
+            /*選択されているタブのスタイルを変える*/
+            .tabs input:checked + .tab_item {
+              background-color: #66b2ff;
+              color: #fff;
+            }
 
             .youtube_short{
              width: 70%; /* 伸縮する横幅 */
@@ -251,6 +365,19 @@
             }
             
         </style>
+            </style>
+
+
+
+    
+    <p><i class="fa-solid fa-volume-high"></i> 動画再生時に音が出ますのでご注意ください<br>
+      <i class="fa-solid fa-qrcode"></i>「QRコード」は株式会社デンソーウェーブの登録商標です。</p>
+
+      
+
+        
+
+           
     <a href="https://coolsharetakarazuka.github.io/bingo/" class="btn">ビンゴの遊び方は<br>ここをタップ</a>
     <p> 画像は実際の表示と異なる場合があります。</p>
     <p>「QRコード」株式会社デンソーウェーブの登録商標です。</p>
@@ -954,6 +1081,7 @@
      padding-bottom: 10px;
      padding-left: 10px;
      font-size: 70%;
+     
    }
 
    .bottomMenu {
